@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_icon_home"
+        android:title="Homepage" />
+    <item
+        android:id="@+id/kategoriFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_icon_book"
+        android:title="Kategori" />
+    <item
+        android:id="@+id/reminderFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_reminder_reminder"
+        android:title="Reminder" />
+    <item
+        android:id="@+id/laporanFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_icon_laporan"
+        android:title="Laporan" />
+</menu>

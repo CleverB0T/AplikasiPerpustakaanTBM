@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">AplikasiPerpustakaanTBM</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about_us">TBM Kolong adalah taman baca yang didirikan di kolong flyover
+        ciputat untuk menambah minat baca pada anak-anak dan mengisi kegiatan positif untuk
+        anak-anak. Mari ikut serta dalam TBM Kolong untuk berperan dalam senyum, keceriaan</string>
+    <string name="string_title">TAMAN<br>BACAAN</br> <br>KOLONG</br> CIPUTAT</string>
+    <string name="tambah_buku">Tambah<br>Buku</br></string>
+</resources>

@@ -1,4 +1,4 @@
-package com.learn.android.aplikasiperpustakaantbm
+package com.learn.android.aplikasiperpustakaantbm.presentation.ui.fragment
 
 import android.Manifest
 import android.app.Activity
@@ -17,6 +17,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import coil.load
 import coil.transform.CircleCropTransformation
+import com.learn.android.aplikasiperpustakaantbm.R
 import com.learn.android.aplikasiperpustakaantbm.databinding.FragmentAddAdminBinding
 
 
@@ -76,7 +77,7 @@ class AddAdminFragment : Fragment() {
                 arrayOf("Select photo from Gallery", "Capture photo from Camera")
             // Request Permissions
             if (allPermissionsGranted()) {
-                pictureDialog.setItems(pictureDialogItem) { dialog, which ->
+                pictureDialog.setItems(pictureDialogItem) { _, which ->
                     when (which) {
                         0 -> gallery()
                         1 -> camera()
@@ -105,7 +106,7 @@ class AddAdminFragment : Fragment() {
         resultLauncher.launch(intent)
     }
 
-    private fun allPermissionsGranted() = Companion.REQUIRED_PERMISSIONS.all {
+    private fun allPermissionsGranted() = REQUIRED_PERMISSIONS.all {
         ActivityCompat.checkSelfPermission(
             requireContext(),
             it

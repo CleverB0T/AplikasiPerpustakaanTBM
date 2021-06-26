@@ -6,7 +6,7 @@
     app:startDestination="@id/homeFragment">
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.learn.android.aplikasiperpustakaantbm.HomeFragment"
+        android:name="com.learn.android.aplikasiperpustakaantbm.presentation.ui.fragment.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -15,22 +15,22 @@
     </fragment>
     <fragment
         android:id="@+id/kategoriFragment"
-        android:name="com.learn.android.aplikasiperpustakaantbm.KategoriFragment"
+        android:name="com.learn.android.aplikasiperpustakaantbm.presentation.ui.fragment.KategoriFragment"
         android:label="fragment_kategori"
         tools:layout="@layout/fragment_kategori" />
     <fragment
         android:id="@+id/reminderFragment"
-        android:name="com.learn.android.aplikasiperpustakaantbm.ReminderFragment"
+        android:name="com.learn.android.aplikasiperpustakaantbm.presentation.ui.fragment.ReminderFragment"
         android:label="fragment_reminder"
         tools:layout="@layout/fragment_reminder" />
     <fragment
         android:id="@+id/laporanFragment"
-        android:name="com.learn.android.aplikasiperpustakaantbm.LaporanFragment"
+        android:name="com.learn.android.aplikasiperpustakaantbm.presentation.ui.fragment.LaporanFragment"
         android:label="fragment_laporan"
         tools:layout="@layout/fragment_laporan" />
     <fragment
         android:id="@+id/userFragment"
-        android:name="com.learn.android.aplikasiperpustakaantbm.UserFragment"
+        android:name="com.learn.android.aplikasiperpustakaantbm.presentation.ui.fragment.UserFragment"
         android:label="fragment_user"
         tools:layout="@layout/fragment_user" >
         <action
@@ -51,7 +51,7 @@
     </fragment>
     <fragment
         android:id="@+id/addAdminFragment"
-        android:name="com.learn.android.aplikasiperpustakaantbm.AddAdminFragment"
+        android:name="com.learn.android.aplikasiperpustakaantbm.presentation.ui.fragment.AddAdminFragment"
         android:label="fragment_add_admin"
         tools:layout="@layout/fragment_add_admin" >
         <action
@@ -60,7 +60,7 @@
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
-        android:name="com.learn.android.aplikasiperpustakaantbm.AboutFragment"
+        android:name="com.learn.android.aplikasiperpustakaantbm.presentation.ui.fragment.AboutFragment"
         android:label="fragment_about"
         tools:layout="@layout/fragment_about" >
         <action
@@ -69,7 +69,7 @@
     </fragment>
     <fragment
         android:id="@+id/editAdminFragment"
-        android:name="com.learn.android.aplikasiperpustakaantbm.EditAdminFragment"
+        android:name="com.learn.android.aplikasiperpustakaantbm.presentation.ui.fragment.EditAdminFragment"
         android:label="fragment_edit_admin"
         tools:layout="@layout/fragment_edit_admin" >
         <action
@@ -78,7 +78,7 @@
     </fragment>
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.learn.android.aplikasiperpustakaantbm.SplashFragment"
+        android:name="com.learn.android.aplikasiperpustakaantbm.presentation.ui.fragment.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
@@ -87,7 +87,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.learn.android.aplikasiperpustakaantbm.LoginFragment"
+        android:name="com.learn.android.aplikasiperpustakaantbm.presentation.ui.fragment.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -96,7 +96,7 @@
     </fragment>
     <fragment
         android:id="@+id/addBookFragment"
-        android:name="com.learn.android.aplikasiperpustakaantbm.AddBookFragment"
+        android:name="com.learn.android.aplikasiperpustakaantbm.presentation.ui.fragment.AddBookFragment"
         android:label="fragment_add_book"
         tools:layout="@layout/fragment_add_book" />
 </navigation>

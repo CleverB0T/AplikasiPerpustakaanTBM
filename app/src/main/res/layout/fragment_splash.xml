@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:background="@drawable/backgroud_log"
-        android:text="LOG"
+        android:text="LOGIN"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/view4"

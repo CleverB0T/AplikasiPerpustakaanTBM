@@ -12,4 +12,7 @@
     <string name="kategori_buku">Kategori<br>Buku</br></string>
     <string name="edit_profile">EDIT PROFILE</string>
     <string name="buku_umum">Buku <br>Umum</br></string>
+    <string name="buku_novel">Buku <br>Novel</br></string>
+    <string name="buku_remaja">Buku <br>Remaja</br></string>
+    <string name="buku_komik">Buku <br>Komik</br></string>
 </resources>

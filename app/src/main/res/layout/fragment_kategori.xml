@@ -77,208 +77,215 @@
             app:layout_constraintTop_toBottomOf="@id/text_user" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="50dp"
-        android:orientation="vertical"
-        android:padding="15dp"
-        android:layout_margin="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/header2">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/header2"
+        android:fillViewport="true">
 
-        <com.google.android.material.card.MaterialCardView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginStart="35dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="35dp"
-            app:cardCornerRadius="35dp"
-            app:cardElevation="5dp">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="wrap_content"
-                android:layout_height="100dp">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="120dp"
-                    android:layout_height="0dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/gambar_umum_kategori"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <LinearLayout
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="120dp"
-                android:orientation="horizontal">
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="35dp"
+                app:cardCornerRadius="35dp"
+                app:cardElevation="5dp">
 
-                <TextView
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="120dp"
+                        android:layout_height="0dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/gambar_umum_kategori"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/buku_umum"
-                    android:textColor="@color/primary_light"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:padding="25dp"
-                    android:layout_gravity="center_vertical"
-                    app:drawableEndCompat="@drawable/ic_arrow_kategori" />
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="120dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:padding="25dp"
+                        android:text="@string/buku_umum"
+                        android:textColor="@color/primary_light"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:drawableEndCompat="@drawable/ic_arrow_kategori" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
 
 
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginStart="35dp"
-            android:layout_marginTop="35dp"
-            android:layout_marginEnd="35dp"
-            app:cardCornerRadius="35dp"
-            app:cardElevation="5dp">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="wrap_content"
-                android:layout_height="100dp">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="120dp"
-                    android:layout_height="0dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/gambar_novel_kategori"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <LinearLayout
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="120dp"
-                android:orientation="horizontal">
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="35dp"
+                app:cardCornerRadius="35dp"
+                app:cardElevation="5dp">
 
-                <TextView
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="120dp"
+                        android:layout_height="0dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/gambar_novel_kategori"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Buku Novel"
-                    android:textColor="@color/primary_light"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:padding="25dp"
-                    android:layout_gravity="center_vertical"
-                    app:drawableEndCompat="@drawable/ic_arrow_kategori" />
-            </LinearLayout>
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="120dp"
+                    android:orientation="horizontal">
 
-        </com.google.android.material.card.MaterialCardView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:padding="30dp"
+                        android:text="@string/buku_novel"
+                        android:textColor="@color/primary_light"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:drawableEndCompat="@drawable/ic_arrow_kategori" />
+                </LinearLayout>
 
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginStart="35dp"
-            android:layout_marginTop="35dp"
-            android:layout_marginEnd="35dp"
-            app:cardCornerRadius="35dp"
-            app:cardElevation="5dp">
+            </com.google.android.material.card.MaterialCardView>
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="wrap_content"
-                android:layout_height="100dp">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="120dp"
-                    android:layout_height="0dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/gambar_remaja_kategori"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <LinearLayout
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="120dp"
-                android:orientation="horizontal">
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="35dp"
+                app:cardCornerRadius="35dp"
+                app:cardElevation="5dp">
 
-                <TextView
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="120dp"
+                        android:layout_height="0dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/gambar_remaja_kategori"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Buku Remaja"
-                    android:textColor="@color/primary_light"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:padding="25dp"
-                    android:layout_gravity="center_vertical"
-                    app:drawableEndCompat="@drawable/ic_arrow_kategori" />
-            </LinearLayout>
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="120dp"
+                    android:orientation="horizontal">
 
-        </com.google.android.material.card.MaterialCardView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:padding="30dp"
+                        android:text="@string/buku_remaja"
+                        android:textColor="@color/primary_light"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:drawableEndCompat="@drawable/ic_arrow_kategori" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
 
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginStart="35dp"
-            android:layout_marginTop="35dp"
-            android:layout_marginEnd="35dp"
-            app:cardCornerRadius="35dp"
-            app:cardElevation="5dp">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="wrap_content"
-                android:layout_height="100dp">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="120dp"
-                    android:layout_height="0dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/gambar_anak_kategori"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <LinearLayout
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="120dp"
-                android:orientation="horizontal">
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="35dp"
+                app:cardCornerRadius="35dp"
+                app:cardElevation="5dp">
 
-                <TextView
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="120dp"
+                        android:layout_height="0dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/gambar_anak_kategori"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Buku Komik"
-                    android:textColor="@color/primary_light"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:padding="25dp"
-                    android:layout_gravity="center_vertical"
-                    app:drawableEndCompat="@drawable/ic_arrow_kategori" />
-            </LinearLayout>
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="120dp"
+                    android:orientation="horizontal">
 
-        </com.google.android.material.card.MaterialCardView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:padding="30dp"
+                        android:text="@string/buku_komik"
+                        android:textColor="@color/primary_light"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:drawableEndCompat="@drawable/ic_arrow_kategori" />
+                </LinearLayout>
 
-    </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <View android:layout_width="match_parent"
+                android:layout_height="100dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,9 @@
 
     <solid android:color="@color/primary_background" />
 
-    <corners android:radius="20dp"/>
+    <corners android:topLeftRadius="20dp"
+        android:topRightRadius="20dp"/>
+
+
 
 </shape>

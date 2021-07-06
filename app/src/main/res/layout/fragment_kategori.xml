@@ -8,20 +8,7 @@
     android:background="@color/primary_dark"
     tools:context=".presentation.ui.fragment.KategoriFragment">
 
-    <LinearLayout
-        android:id="@+id/view1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_icon_back" />
-    </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/header2"
@@ -29,7 +16,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view1">
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="25dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -42,39 +30,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/icon_user"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="15dp"
-            android:src="@drawable/ic_icon_button_user"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/text_user"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp"
-            android:text="Tiwi Sirait"
-            android:textColor="@color/white"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            app:layout_constraintRight_toLeftOf="@+id/icon_user"
-            app:layout_constraintTop_toTopOf="@id/icon_user" />
-
-        <TextView
-            android:id="@+id/text_date"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:text="Rabu, 30 Juni 2021"
-            android:textColor="@color/white"
-            android:textSize="10sp"
-            android:textStyle="bold"
-            app:layout_constraintRight_toRightOf="@+id/text_user"
-            app:layout_constraintTop_toBottomOf="@id/text_user" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ScrollView
@@ -97,7 +52,7 @@
                 android:layout_height="100dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginStart="35dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="25dp"
                 android:layout_marginEnd="35dp"
                 app:cardCornerRadius="35dp"
                 app:cardElevation="5dp">
@@ -129,7 +84,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:padding="25dp"
+                        android:padding="30dp"
                         android:text="@string/buku_umum"
                         android:textColor="@color/primary_light"
                         android:textSize="18sp"

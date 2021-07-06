@@ -1,14 +1,20 @@
 package com.learn.android.aplikasiperpustakaantbm.presentation.ui.activity
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
-import androidx.room.Room
 import com.learn.android.aplikasiperpustakaantbm.R
+import com.learn.android.aplikasiperpustakaantbm.data.dao.BookDao
+import com.learn.android.aplikasiperpustakaantbm.data.dao.PengunjungDao
+import com.learn.android.aplikasiperpustakaantbm.data.dao.UserDao
 import com.learn.android.aplikasiperpustakaantbm.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var mainBinding: ActivityMainBinding
@@ -37,9 +43,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun showBottomNavigationBar() {
         mainBinding.bottomNavigationView.visibility = View.VISIBLE
+        mainBinding.bottomAppBar.visibility = View.VISIBLE
     }
 
     private fun hideBottomNavigationBar() {
         mainBinding.bottomNavigationView.visibility = View.GONE
+        mainBinding.bottomAppBar.visibility = View.GONE
     }
+
 }

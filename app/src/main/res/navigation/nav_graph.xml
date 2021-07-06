@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/splashFragment">
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.learn.android.aplikasiperpustakaantbm.presentation.ui.fragment.HomeFragment"
@@ -12,6 +12,12 @@
         <action
             android:id="@+id/action_homeFragment_to_userFragment"
             app:destination="@id/userFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_addBookFragment"
+            app:destination="@id/addBookFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_peminjamanBukuFragment"
+            app:destination="@id/peminjamanBukuFragment" />
     </fragment>
     <fragment
         android:id="@+id/kategoriFragment"
@@ -27,7 +33,20 @@
         android:id="@+id/laporanFragment"
         android:name="com.learn.android.aplikasiperpustakaantbm.presentation.ui.fragment.LaporanFragment"
         android:label="fragment_laporan"
-        tools:layout="@layout/fragment_laporan" />
+        tools:layout="@layout/fragment_laporan" >
+        <action
+            android:id="@+id/action_laporanFragment_to_laporanPeminjamanFragment"
+            app:destination="@id/laporanPeminjamanFragment" />
+        <action
+            android:id="@+id/action_laporanFragment_to_laporanPengembalianFragment"
+            app:destination="@id/laporanPengembalianFragment" />
+        <action
+            android:id="@+id/action_laporanFragment_to_laporanAdminFragment"
+            app:destination="@id/laporanAdminFragment" />
+        <action
+            android:id="@+id/action_laporanFragment_to_laporanKetersedianFragment"
+            app:destination="@id/laporanKetersedianFragment" />
+    </fragment>
     <fragment
         android:id="@+id/userFragment"
         android:name="com.learn.android.aplikasiperpustakaantbm.presentation.ui.fragment.UserFragment"
@@ -98,5 +117,39 @@
         android:id="@+id/addBookFragment"
         android:name="com.learn.android.aplikasiperpustakaantbm.presentation.ui.fragment.AddBookFragment"
         android:label="fragment_add_book"
-        tools:layout="@layout/fragment_add_book" />
+        tools:layout="@layout/fragment_add_book" >
+        <action
+            android:id="@+id/action_addBookFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/peminjamanBukuFragment"
+        android:name="com.learn.android.aplikasiperpustakaantbm.presentation.ui.fragment.PeminjamanBukuFragment"
+        android:label="fragment_peminjaman_buku"
+        tools:layout="@layout/fragment_peminjaman_buku" />
+    <fragment
+        android:id="@+id/laporanPeminjamanFragment"
+        android:name="com.learn.android.aplikasiperpustakaantbm.LaporanPeminjamanFragment"
+        android:label="fragment_laporan_peminjaman"
+        tools:layout="@layout/fragment_laporan_peminjaman" />
+    <fragment
+        android:id="@+id/laporanPengembalianFragment"
+        android:name="com.learn.android.aplikasiperpustakaantbm.LaporanPengembalianFragment"
+        android:label="fragment_laporan_pengembalian"
+        tools:layout="@layout/fragment_laporan_pengembalian" />
+    <fragment
+        android:id="@+id/laporanAdminFragment"
+        android:name="com.learn.android.aplikasiperpustakaantbm.LaporanAdminFragment"
+        android:label="fragment_laporan_admin"
+        tools:layout="@layout/fragment_laporan_admin" />
+    <fragment
+        android:id="@+id/laporanKetersedianFragment"
+        android:name="com.learn.android.aplikasiperpustakaantbm.LaporanKetersedianFragment"
+        android:label="fragment_laporan_ketersedian"
+        tools:layout="@layout/fragment_laporan_ketersedian" />
+    <fragment
+        android:id="@+id/detailBukuFragment"
+        android:name="com.learn.android.aplikasiperpustakaantbm.presentation.ui.fragment.DetailBukuFragment"
+        android:label="fragment_detail_buku"
+        tools:layout="@layout/fragment_detail_buku" />
 </navigation>

@@ -17,14 +17,17 @@ class EditAdminFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         bindingFragment = FragmentEditAdminBinding.inflate(inflater, container, false)
+        return bindingFragment.root
+    }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         bindingFragment.buttonBackProfile.setOnClickListener {
             it.findNavController().navigate(R.id.action_editAdminFragment_to_userFragment)
         }
-        return inflater.inflate(R.layout.fragment_edit_admin, container, false)
     }
 
 }

@@ -1,12 +1,46 @@
 <resources>
-    <string name="app_name">AplikasiPerpustakaanTBM</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="app_name">PerpustakaanTBM</string>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="about_us">TBM Kolong adalah taman baca yang didirikan di kolong flyover
         ciputat untuk menambah minat baca pada anak-anak dan mengisi kegiatan positif untuk
         anak-anak. Mari ikut serta dalam TBM Kolong untuk berperan dalam senyum, keceriaan</string>
-    <string name="string_title">TAMAN<br>BACAAN</br> <br>KOLONG</br> CIPUTAT</string>
-    <string name="tambah_buku">Tambah<br>Buku</br></string>
+    <string name="string_title">TAMAN <br>BACAAN</br> <br>KOLONG</br> CIPUTAT</string>
+    <string name="tambah_buku">Tambah <br> Buku</br></string>
+    <string name="kategori_buku">Kategori<br>Buku</br></string>
+    <string name="edit_profile">EDIT PROFILE</string>
+    <string name="buku_umum">Buku Umum</string>
+    <string name="buku_novel">Buku Novel</string>
+    <string name="buku_remaja">Buku Remaja</string>
+    <string name="buku_komik">Buku Komik</string>
+    <string name="text_genre">Genre Buku Umum</string>
+
+    <string-array name="category">
+        <item>"Buku Umum"</item>
+        <item>"Buku Novel"</item>
+        <item>"Buku Remaja"</item>
+        <item>"Buku Komik"</item>
+    </string-array>
+
+    <string-array name="genre">
+        <item>"Anak Anak"</item>
+        <item>"Pendidikan"</item>
+        <item>"Ekonomi"</item>
+        <item>"Majalah"</item>
+        <item>"Kesehatan"</item>
+        <item>"Biografi"</item>
+        <item>"Sejarah"</item>
+        <item>"Teknologi"</item>
+        <item>"Agama"</item>
+        <item>"Komik"</item>
+        <item>"KKPK"</item>
+        <item>"Cerita"</item>
+        <item>"Dongeng"</item>
+        <item>"Pembelajaran"</item>
+        <item>"Romansa</item>
+        <item>"Fiksi"</item>
+        <item>"Komedi"</item>
+        <item>"Misteri"</item>
+        <item>"Motivasi"</item>
+    </string-array>
 </resources>

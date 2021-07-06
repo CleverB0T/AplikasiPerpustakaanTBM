@@ -30,6 +30,20 @@ class UserFragment : Fragment() {
             it.findNavController().navigate(R.id.action_userFragment_to_addAdminFragment)
         }
 
+        bindingFragment.buttonAboutUs.setOnClickListener {
+            it.findNavController().navigate(R.id.action_userFragment_to_aboutFragment)
+        }
+
+        bindingFragment.buttonLogout.setOnClickListener {
+            it.findNavController().navigate(R.id.action_userFragment_to_splashFragment)
+        }
+
+        bindingFragment.buttonEditUser.setOnClickListener {
+            it.findNavController().navigate(R.id.action_userFragment_to_editAdminFragment)
+        }
+
+
+
         return bindingFragment.root
     }
 

@@ -1,2 +1,2 @@
-rootProject.name = "AplikasiPerpustakaanTBM"
+rootProject.name = "PerpustakaanTBM"
 include ':app'

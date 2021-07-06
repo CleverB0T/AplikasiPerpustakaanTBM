@@ -1,6 +1,6 @@
 package com.learn.android.aplikasiperpustakaantbm.data.model
 
-import androidx.room.ColumnInfo
+import android.graphics.Bitmap
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.sql.Date
@@ -8,21 +8,13 @@ import java.sql.Date
 @Entity(tableName = "pengunjung_table")
 data class PengunjungEntity(
 
-    @PrimaryKey(autoGenerate = false)
-    @ColumnInfo(name = "id_pengunjung")
-    var idPengunjung: String,
-
-    @ColumnInfo(name = "nama_pengunjung")
-    var namaPengunjung: String,
-
-    @ColumnInfo(name = "tanggal_peminjaman")
-    var tanggalPeminjaman: Date,
-
-    @ColumnInfo(name = "tanggal_pengembalian")
-    var tanggalPengembalian: Date,
-
-    @ColumnInfo(name = "no_buku")
-    var noBuku: String,
-
-
-)
+    var idPengunjung: String? = null,
+    var namaPengunjung: String? = null,
+    var tanggalPeminjaman: Long? = 0,
+    var tanggalPengembalian: Long? = 0,
+    var noBuku: String? = null,
+    var photoIdentity: Bitmap? = null
+) {
+    @PrimaryKey(autoGenerate = true)
+    var id: Int? = null
+}

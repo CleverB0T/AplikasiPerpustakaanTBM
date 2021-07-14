@@ -1,5 +1,6 @@
 package com.learn.android.aplikasiperpustakaantbm.data.dao
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
@@ -13,8 +14,8 @@ interface PengunjungDao {
     suspend fun insert(pengunjungEntity: PengunjungEntity)
 
     @Query("SELECT * FROM pengunjung_table")
-    fun getAllPengunjung(): Flow<List<PengunjungEntity>>
+    fun getAllPengunjung(): LiveData<List<PengunjungEntity>>
 
     @Query("SELECT SUM(id) FROM pengunjung_table")
-    fun getTotalPengunjung(): Flow<Int>
+    fun getTotalPengunjung(): LiveData<Int>
 }

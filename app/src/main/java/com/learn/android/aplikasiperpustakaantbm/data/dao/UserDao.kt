@@ -1,8 +1,8 @@
 package com.learn.android.aplikasiperpustakaantbm.data.dao
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.learn.android.aplikasiperpustakaantbm.data.model.UserEntity
-import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface UserDao {
@@ -10,13 +10,13 @@ interface UserDao {
     suspend fun insertUser(userEntity: UserEntity)
 
     @Query("SELECT * FROM users_table")
-    fun getAllUser(): Flow<List<UserEntity>>
+    fun getAllUser(): LiveData<List<UserEntity>>
 
     @Query("SELECT * FROM users_table where username LIKE :username")
     suspend fun getDataUser(username: String): UserEntity
 
     @Query("SELECT SUM(id) FROM users_table")
-    fun getTotalUser(): Flow<Int>
+    fun getTotalUser(): LiveData<Int>
 
     @Update
     suspend fun updateUser(userEntity: UserEntity)

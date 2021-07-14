@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.learn.android.aplikasiperpustakaantbm.data.model.UserEntity
 import com.learn.android.aplikasiperpustakaantbm.data.repository.UserRepository
 import com.learn.android.aplikasiperpustakaantbm.data.utils.Event
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -20,6 +21,10 @@ class LoginViewModel @Inject constructor(
     var inputUsername = MutableLiveData<String>()
     var inputPassword = MutableLiveData<String>()
 
+    private var _loginEvent = MutableLiveData<Event<UserEntity>>()
+    val loginEvent : LiveData<Event<UserEntity>> = _loginEvent
+
+
     private val statusMessage = MutableLiveData<Event<String>>()
     val message: LiveData<Event<String>>
         get() = statusMessage
@@ -33,14 +38,13 @@ class LoginViewModel @Inject constructor(
                 val username = userRepository.getUserData(inputUsername.value!!)
                 if (username != null) {
                     withContext(Dispatchers.Main) {
-
-
                         if (username.password == inputPassword.value) {
                             inputUsername.value = ""
                             inputPassword.value = ""
                             statusMessage.value = Event("Anda Berhasil Login")
-                        } else {
+                            _loginEvent.value = Event(username)
 
+                        } else {
                             statusMessage.value = Event("Password yang anda masukan tidak sesuai")
                         }
                     }

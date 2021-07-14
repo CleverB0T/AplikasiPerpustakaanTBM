@@ -1,5 +1,7 @@
 package com.learn.android.aplikasiperpustakaantbm.data.utils
 
+import androidx.lifecycle.Observer
+
 open class Event<out T>(private val content: T) {
 
     var hasBeenHandled = false
@@ -21,4 +23,12 @@ open class Event<out T>(private val content: T) {
      * Returns the content, even if it's already been handled.
      */
     fun peekContent(): T = content
+}
+
+class EventObserver<T>(private val onEventUnhandledContent: (T) -> Unit) : Observer<Event<T>> {
+    override fun onChanged(event: Event<T>?) {
+        event?.getContentIfNotHandled()?.let {
+            onEventUnhandledContent(it)
+        }
+    }
 }

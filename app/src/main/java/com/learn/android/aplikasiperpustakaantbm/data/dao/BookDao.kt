@@ -1,5 +1,6 @@
 package com.learn.android.aplikasiperpustakaantbm.data.dao
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
@@ -13,20 +14,20 @@ interface BookDao {
     suspend fun insert(bookEntity: BookEntity)
 
     @Query("SELECT * FROM books_table")
-    fun getAllBooks(): Flow<List<BookEntity>>
+    fun getAllBooks(): LiveData<List<BookEntity>>
 
     @Query("SELECT * FROM books_table ORDER BY timestamp DESC")
-    fun getAllBookSortedByDate(): Flow<List<BookEntity>>
+    fun getAllBookSortedByDate(): LiveData<List<BookEntity>>
 
     @Query("SELECT * FROM books_table ORDER BY kategory DESC")
-    fun getAllBookSortedByKategory(): Flow<List<BookEntity>>
+    fun getAllBookSortedByKategory(): LiveData<List<BookEntity>>
 
     @Query("SELECT * FROM books_table ORDER BY genre DESC")
-    fun getAllBookSortedByGenre(): Flow<List<BookEntity>>
+    fun getAllBookSortedByGenre(): LiveData<List<BookEntity>>
 
     @Query("SELECT * FROM books_table ORDER BY favorite DESC")
-    fun getAllBookSortedByFavorite(): Flow<List<BookEntity>>
+    fun getAllBookSortedByFavorite(): LiveData<List<BookEntity>>
 
     @Query("SELECT SUM(jumlahBuku) FROM books_table")
-    fun getTotalBooks(): Flow<Int>
+    fun getTotalBooks(): LiveData<Int>
 }

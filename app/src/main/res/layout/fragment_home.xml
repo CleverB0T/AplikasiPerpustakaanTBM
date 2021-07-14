@@ -1,198 +1,209 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/header_background"
-    tools:context=".presentation.ui.fragment.HomeFragment">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.core.widget.NestedScrollView
-        android:id="@+id/nestedScrollView"
+    <data>
+
+        <variable
+            name="myViewModel"
+            type="com.learn.android.aplikasiperpustakaantbm.presentation.viewmodel.HomeViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:fillViewport="true">
+        android:background="@drawable/header_background"
+        tools:context=".presentation.ui.fragment.HomeFragment">
 
-        <LinearLayout
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/header"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/header_background"
-                android:padding="10dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="25dp"
-                    android:padding="5dp"
-                    android:text="Welcome"
-                    android:textColor="@color/white"
-                    android:textSize="25sp"
-                    android:textStyle="bold"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageButton
-                    android:id="@+id/button_user"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="25dp"
-                    android:background="@null"
-                    android:padding="5dp"
-                    android:src="@drawable/ic_icon_button_user"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/nickname"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:text="Tiwi Sirait"
-                    android:textAlignment="gravity"
-                    android:textColor="@color/white"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    app:layout_constraintRight_toLeftOf="@id/button_user"
-                    app:layout_constraintTop_toTopOf="@id/button_user" />
-
-                <TextView
-                    android:id="@+id/date_textview"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:text="Rabu, 30 Juni 2021"
-                    android:textColor="@color/white"
-                    android:textSize="10sp"
-                    android:textStyle="bold"
-                    app:layout_constraintRight_toRightOf="@id/nickname"
-                    app:layout_constraintTop_toBottomOf="@id/nickname" />
-
-                <LinearLayout
-                    android:id="@+id/linear"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginEnd="15dp"
-                    android:orientation="horizontal"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/button_user">
-
-                    <EditText
-                        android:id="@+id/text_search"
-                        android:layout_width="0dp"
-                        android:layout_height="40dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/background_search"
-                        android:drawableLeft="@drawable/ic_icon_search"
-                        android:hint="what whould you like to"
-                        android:imeOptions="actionSearch"
-                        android:inputType="text"
-                        android:paddingStart="15dp"
-                        android:focusable="auto"
-                        android:textColor="@color/white"
-                        android:paddingEnd="15dp"
-                        android:textColorHint="@color/color_text_hint"
-                        android:textSize="15sp" />
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/newcollection"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="New Collection"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    app:layout_constraintLeft_toLeftOf="@id/linear"
-                    app:layout_constraintTop_toBottomOf="@id/linear" />
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/cardview"
-                    android:layout_width="0dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="20dp"
-                    app:cardCornerRadius="20dp"
-                    app:layout_constraintLeft_toLeftOf="@id/linear"
-                    app:layout_constraintRight_toRightOf="@id/linear"
-                    app:layout_constraintTop_toBottomOf="@id/newcollection">
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rv_newcollection"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:padding="15dp"/>
-                </com.google.android.material.card.MaterialCardView>
-
-                <Button
-                    android:id="@+id/button_add_book"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:backgroundTint="@color/white"
-                    android:text="Tambah Buku"
-                    android:textColor="@color/primary_light"
-                    app:icon="@drawable/ic_icon_add_book"
-                    app:layout_constraintLeft_toLeftOf="@id/cardview"
-                    app:layout_constraintRight_toRightOf="@id/cardview"
-                    app:layout_constraintTop_toBottomOf="@id/cardview" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Populer"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:layout_constraintLeft_toLeftOf="@id/button_add_book"
-                    app:layout_constraintRight_toRightOf="@id/button_add_book"
-                    app:layout_constraintTop_toBottomOf="@id/button_add_book" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/background_recyclerview"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/header">
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rv_populer"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/header"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="15dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:background="@drawable/header_background"
+                    android:padding="10dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </LinearLayout>
+                    app:layout_constraintTop_toTopOf="parent">
 
-    </androidx.core.widget.NestedScrollView>
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="25dp"
+                        android:padding="5dp"
+                        android:text="Welcome"
+                        android:textColor="@color/white"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/button_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="25dp"
+                        android:background="@null"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_icon_button_user"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/nickname"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Tiwi Sirait"
+                        android:textAlignment="gravity"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:layout_constraintRight_toLeftOf="@id/button_user"
+                        app:layout_constraintTop_toTopOf="@id/button_user" />
+
+                    <TextView
+                        android:id="@+id/date_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="Rabu, 30 Juni 2021"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        app:layout_constraintRight_toRightOf="@id/nickname"
+                        app:layout_constraintTop_toBottomOf="@id/nickname" />
+
+                    <LinearLayout
+                        android:id="@+id/linear"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/button_user">
+
+                        <EditText
+                            android:id="@+id/text_search"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/background_search"
+                            android:drawableLeft="@drawable/ic_icon_search"
+                            android:focusable="auto"
+                            android:hint="what whould you like to"
+                            android:imeOptions="actionSearch"
+                            android:inputType="text"
+                            android:paddingStart="15dp"
+                            android:paddingEnd="15dp"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/color_text_hint"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/newcollection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="New Collection"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toLeftOf="@id/linear"
+                        app:layout_constraintTop_toBottomOf="@id/linear" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardview"
+                        android:layout_width="0dp"
+                        android:layout_height="125dp"
+                        android:layout_marginTop="20dp"
+                        app:cardCornerRadius="20dp"
+                        app:layout_constraintLeft_toLeftOf="@id/linear"
+                        app:layout_constraintRight_toRightOf="@id/linear"
+                        app:layout_constraintTop_toBottomOf="@id/newcollection">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_newcollection"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="15dp" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <Button
+                        android:id="@+id/button_add_book"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:backgroundTint="@color/white"
+                        android:text="Tambah Buku"
+                        android:textColor="@color/primary_light"
+                        app:icon="@drawable/ic_icon_add_book"
+                        app:layout_constraintLeft_toLeftOf="@id/cardview"
+                        app:layout_constraintRight_toRightOf="@id/cardview"
+                        app:layout_constraintTop_toBottomOf="@id/cardview" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Populer"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toLeftOf="@id/button_add_book"
+                        app:layout_constraintRight_toRightOf="@id/button_add_book"
+                        app:layout_constraintTop_toBottomOf="@id/button_add_book" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_recyclerview"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/header">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_populer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
 
